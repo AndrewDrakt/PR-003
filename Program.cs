@@ -2,7 +2,17 @@
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void MakeSound(int korobka)
+        {
+            Console.Beep(korobka, 100);
+            Console.Clear();
+        }
+        static void MakeSound2(int korobka1)
+        {
+            Console.Beep(korobka1, 100);
+            Console.Clear();
+        }
+        static void Main()
         {
             Console.WriteLine("Вас приветсвует интерфейс программы \"Пианино\". Переключение между октавами - F7 и F8");
             ConsoleKeyInfo oktava = Console.ReadKey();
@@ -11,180 +21,129 @@
             if (oktava.Key == ConsoleKey.F8)
             {
                 Console.WriteLine("Выбрана 8 октава");
-                double[] okt8 = new double[12]
+                int[] okt8 = new int[12]
                 {4186, 4435, 4699, 4978, 5274, 5588, 5920, 6272, 6645, 7040, 7459, 7902};
                 ConsoleKeyInfo okt = Console.ReadKey();
                 while (okt.Key != ConsoleKey.F7)
                 {
                     if (okt.Key == ConsoleKey.A)
                     {
-                        Console.Beep(4186, 100);
-                        Console.Clear();
-                        okt = Console.ReadKey();
+                        MakeSound(okt8[0]);
                     }
                     else if (okt.Key == ConsoleKey.S)
                     {
-                        Console.Beep(4435, 100);
-                        Console.Clear();
-                        okt = Console.ReadKey();
+                        MakeSound(okt8[1]);
                     }
                     else if (okt.Key == ConsoleKey.D)
                     {
-                        Console.Beep(4699, 100);
-                        Console.Clear();
-                        okt = Console.ReadKey();
+                        MakeSound(okt8[2]);
                     }
                     else if (okt.Key == ConsoleKey.F)
                     {
-                        Console.Beep(4978, 100);
-                        Console.Clear();
-                        okt = Console.ReadKey();
+                        MakeSound(okt8[3]);
                     }
                     else if (okt.Key == ConsoleKey.G)
                     {
-                        Console.Beep(5274, 100);
-                        Console.Clear();
-                        okt = Console.ReadKey();
+                        MakeSound(okt8[4]);
                     }
                     else if (okt.Key == ConsoleKey.H)
                     {
-                        Console.Beep(5588, 100);
-                        Console.Clear();
-                        okt = Console.ReadKey();
+                        MakeSound(okt8[5]);
                     }
                     else if (okt.Key == ConsoleKey.J)
                     {
-                        Console.Beep(5920, 100);
-                        Console.Clear();
-                        okt = Console.ReadKey();
+                        MakeSound(okt8[6]);
                     }
                     else if (okt.Key == ConsoleKey.K)
                     {
-                        Console.Beep(6272, 100);
-                        Console.Clear();
-                        okt = Console.ReadKey();
+                        MakeSound(okt8[7]);
                     }
                     else if (okt.Key == ConsoleKey.L)
                     {
-                        Console.Beep(6645, 100);
-                        Console.Clear();
-                        okt = Console.ReadKey();
+                        MakeSound(okt8[8]);
                     }
                     else if (okt.Key == ConsoleKey.O)
                     {
-                        Console.Beep(7040, 100);
-                        Console.Clear();
-                        okt = Console.ReadKey();
+                        MakeSound(okt8[9]);
                     }
                     else if (okt.Key == ConsoleKey.P)
                     {
-                        Console.Beep(7459, 100);
-                        Console.Clear();
-                        okt = Console.ReadKey();
+                        MakeSound(okt8[10]);
                     }
                     else if (okt.Key == ConsoleKey.I)
                     {
-                        Console.Beep(7902, 100);
-                        Console.Clear();
-                        okt = Console.ReadKey();
-                    }
-                    else
-                    {
-                       break;
-                    }
-                }
-            }
-            else 
-             {
-                
-                Console.WriteLine("Выбрана 7 октава");
-                double[] okt7 = new double[12]
-                {2093,2217,2349,2489 ,2637,2794, 2960, 3136, 3322, 3520 ,3729 , 3951};
-                ConsoleKeyInfo okt2 = Console.ReadKey();
-                while (okt2.Key != ConsoleKey.F8)
-                {
-                    
-                    if (okt2.Key == ConsoleKey.A)
-                    {
-                        Console.Beep(2093, 100);
-                        Console.Clear();
-                        okt2 = Console.ReadKey();
-                    }
-                    else if (okt2.Key == ConsoleKey.S)
-                    {
-                        Console.Beep(2217, 100);
-                        Console.Clear();
-                        okt2 = Console.ReadKey();
-
-                    }
-                    else if (okt2.Key == ConsoleKey.D)
-                    {
-                        Console.Beep(2349, 100);
-                        Console.Clear();
-                        okt2 = Console.ReadKey();
-                    }
-                    else if (okt2.Key == ConsoleKey.F)
-                    {
-                        Console.Beep(2489, 100);
-                        Console.Clear();
-                        okt2 = Console.ReadKey();
-                    }
-                    else if (okt2.Key == ConsoleKey.G)
-                    {
-                        Console.Beep(2637, 100);
-                        Console.Clear();
-                        okt2 = Console.ReadKey();
-                    }
-                    else if (okt2.Key == ConsoleKey.H)
-                    {
-                        Console.Beep(2794, 100);
-                        Console.Clear();
-                        okt2 = Console.ReadKey();
-                    }
-                    else if (okt2.Key == ConsoleKey.J)
-                    {
-                        Console.Beep(2960, 100);
-                        Console.Clear();
-                        okt2 = Console.ReadKey();
-                    }
-                    else if (okt2.Key == ConsoleKey.K)
-                    {
-                        Console.Beep(3136, 100);
-                        Console.Clear();
-                        okt2 = Console.ReadKey();
-                    }
-                    else if (okt2.Key == ConsoleKey.L)
-                    {
-                        Console.Beep(3322, 100);
-                        Console.Clear();
-                        okt2 = Console.ReadKey();
-                    }
-                    else if (okt2.Key == ConsoleKey.O)
-                    {
-                        Console.Beep(3520, 100);
-                        Console.Clear();
-                        okt2 = Console.ReadKey();
-                    }
-                    else if (okt2.Key == ConsoleKey.P)
-                    {
-                        Console.Beep(3729, 100);
-                        Console.Clear();
-                        okt2 = Console.ReadKey();
-                    }
-                    else if (okt2.Key == ConsoleKey.I)
-                    {
-                        Console.Beep(3951, 100);
-                        Console.Clear();
-                        okt2 = Console.ReadKey();
+                        MakeSound(okt8[11]);
                     }
                     else
                     {
                         break;
                     }
+                    okt = Console.ReadKey();
                 }
-             }
-         
+            }
+            else if (oktava.Key == ConsoleKey.F7)
+            {
+                Console.WriteLine("Выбрана 7 октава");
+                int[] okt7 = new int[12]
+                {2093, 2217, 2349, 2489 , 2637, 2794, 2960, 3136, 3322, 3520 ,3729 , 3951};
+                ConsoleKeyInfo okt2 = Console.ReadKey();
+                while (okt2.Key != ConsoleKey.F8)
+                {
+                    if (okt2.Key == ConsoleKey.A)
+                    {
+                        MakeSound2(okt7[0]);
+                    }
+                    else if (okt2.Key == ConsoleKey.S)
+                    {
+                        MakeSound2(okt7[1]);
+                    }
+                    else if (okt2.Key == ConsoleKey.D)
+                    {
+                        MakeSound2(okt7[2]);
+                    }
+                    else if (okt2.Key == ConsoleKey.F)
+                    {
+                        MakeSound2(okt7[3]);
+                    }
+                    else if (okt2.Key == ConsoleKey.G)
+                    {
+                        MakeSound2(okt7[4]);
+                    }
+                    else if (okt2.Key == ConsoleKey.H)
+                    {
+                        MakeSound2(okt7[5]);
+                    }
+                    else if (okt2.Key == ConsoleKey.J)
+                    {
+                        MakeSound2(okt7[6]);
+                    }
+                    else if (okt2.Key == ConsoleKey.K)
+                    {
+                        MakeSound2(okt7[7]);
+                    }
+                    else if (okt2.Key == ConsoleKey.L)
+                    {
+                        MakeSound2(okt7[8]);
+                    }
+                    else if (okt2.Key == ConsoleKey.O)
+                    {
+                        MakeSound2(okt7[9]);
+                    }
+                    else if (okt2.Key == ConsoleKey.P)
+                    {
+                        MakeSound2(okt7[10]);
+                    }
+                    else if (okt2.Key == ConsoleKey.I)
+                    {
+                        MakeSound2(okt7[11]);
+                    }
+                    else
+                    {
+                        break;
+                    }
+                    okt2 = Console.ReadKey();
+                }
+            }
         }
-
     }
-} 
+}
